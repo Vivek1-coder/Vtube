@@ -26,3 +26,8 @@ ii)database is always in another continent toh async await lagana padega
 "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
 
 if anything is changed in env you need to reload
+
+express me imp req.body and req.params 
+
+middlewares -> checking wala matlab if any /admin is there then it need to be checked 
+(err,req,res,next) next is for midddlewares
