@@ -1,5 +1,7 @@
 Initialise by command 
 npm init
+type module for import syntax in package.json
+dev dependency are used in development
 npm i -D nodemon (D-> dev dependency )
 after installing nodemon package.json me test ko dev kar do and do "dev" : "nodemon src/index.js"
 
@@ -9,7 +11,7 @@ for using atlas we need ip address and username and password
 production grade application me hm kabhi bhi ip address ki allow access from anywhere nhi karte h
 Network Access
 Database Access
-Database -> connect
+Database -> connect aur url me last me / nhi hota h
 
 DB connections can be done in two ways : 1. directly in index.js  2. creating connection code in a separate folder and then importing it into index.js
 

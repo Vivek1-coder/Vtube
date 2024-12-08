@@ -33,7 +33,7 @@ connectDB()
 /* 
 // First approach to connect db
 import express from "express"
-
+import { DB_NAME } from "./constants";
 const app = express()
 
 
