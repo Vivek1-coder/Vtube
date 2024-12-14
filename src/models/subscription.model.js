@@ -5,6 +5,7 @@ const subsSchema = new Schema({
         type : Schema.Types.ObjectId,
         ref : "User"
     },
+    
     channel : {
         type : Schema.Types.ObjectId,
         ref : "User"
@@ -12,5 +13,6 @@ const subsSchema = new Schema({
 },{
     timestamps : true
 })
+
 
 export const Subscription = mongoose.model("Subscription",subsSchema)
