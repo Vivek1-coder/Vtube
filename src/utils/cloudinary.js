@@ -13,12 +13,15 @@ const uploadOnCloudinary = async (localFilePath) =>{
     try{
         if(!localFilePath) return null
         //upload file path 
+        if (!fs.existsSync(localFilePath)) {
+            throw new Error("Avatar file is required but missing");
+        }
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type : "auto"
         })
         //File has been uploaded successfully
         console.log("File is uploaded successfully on cloudinary",response.url)
-        // fn.unlinkSync(localFilePath)
+        fs.unlinkSync(localFilePath)
         return response;
     }catch(error){
         fs.unlinkSync(localFilePath) // Remove the locally saved temporary file as the upload got failed
