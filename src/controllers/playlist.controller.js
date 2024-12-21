@@ -7,13 +7,20 @@ import {asyncHandler} from "../utils/asyncHandler.js"
 
 const createPlaylist = asyncHandler(async (req, res) => {
     const {name, description} = req.body
-
     //TODO: create playlist
+    if(!name || !description){
+        throw new ApiError(404,"All fields are required")
+    }
+
+    
+
 })
 
 const getUserPlaylists = asyncHandler(async (req, res) => {
     const {userId} = req.params
     //TODO: get user playlists
+
+
 })
 
 const getPlaylistById = asyncHandler(async (req, res) => {
