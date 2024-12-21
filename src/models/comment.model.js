@@ -6,11 +6,11 @@ const commentSchema = new Schema({
         required : true
     },
     video : {
-        type : Schema.Type.ObjectId,
+        type : Schema.Types.ObjectId,
         ref : "Video"
     },
     user : {
-        type : Schema.Type.ObjectId,
+        type : Schema.Types.ObjectId,
         ref : "User"
     }
 },{
